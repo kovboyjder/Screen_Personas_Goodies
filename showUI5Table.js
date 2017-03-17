@@ -57,7 +57,7 @@ if (selectedTable.rowCount > 0) {
 
 //Event listener to get the row index stored in event.data
 function listener(event){
-	session.findById("wnd[0]/usr/cntlGRID_CONTAINER/shellcont/shell").selectedRowsAbsolute = event.data.toString();
+	session.findById(selectedTable).selectedRowsAbsolute = event.data.toString();
 }
 
 //Attach event listener to window
