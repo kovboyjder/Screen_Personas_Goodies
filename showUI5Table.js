@@ -55,19 +55,6 @@ if (selectedTable.rowCount > 0) {
     }
 }
 
-//Event listener to get the row index stored in event.data
-function listener(event){
-	session.findById(selectedTable).selectedRowsAbsolute = event.data.toString();
-}
-
-//Attach event listener to window
-if (window.addEventListener){
-  addEventListener("message", listener, false)
-} else {
-  attachEvent("onmessage", listener)
-}
-
-
 var tableHTML = '<html> <head> \
 <script src="/sap/public/bc/ui5_ui5/1/resources/sap-ui-cachebuster/sap-ui-core.js" \
     id="sap-ui-bootstrap" \
